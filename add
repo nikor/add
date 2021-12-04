@@ -1,0 +1,18 @@
+partial alphanumeric_keys
+xkb_symbols "dvorak" {
+    include "us(dvorak)"
+
+    name[Group1]="Alternative Danish Dvorak";
+
+    key <AC01> { [      a,  A,  aring, Aring ]   };
+    key <AC02> { [      o,  O,  oslash, Oslash ]   };
+    key <AC03> { [      e,  E, ae , AE      ]   };
+
+    //add checkmark
+    //keycode (0xaf3) is from here /usr/include/X11/keysymdef.h
+    key <AB09> { [      v,  V,  0xaf3]  };
+
+
+    // fixed https://bugs.freedesktop.org/show_bug.cgi?id=4397
+    include "level3(ralt_switch)"
+};
