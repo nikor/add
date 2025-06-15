@@ -8,7 +8,10 @@ url='https://github.com/nikor/add'
 source=('add')
 md5sums=('4ffae14df38221ee788e2010f1d1d163')
 
+path=/usr/share/xkeyboard-config-2/symbols/
+#path=/usr/share/X11/xkb/symbols/
+
 package() {
-    mkdir -p ${pkgdir}/usr/share/X11/xkb/symbols/
-    install -Dm644 $startdir/add ${pkgdir}/usr/share/X11/xkb/symbols/ 
+    mkdir -p ${pkgdir}${path}
+    install -Dm644 $startdir/add ${pkgdir}${path}
 }
